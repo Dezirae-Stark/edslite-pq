@@ -41,7 +41,7 @@ jobs:
         fi
 
     - name: Build Lite Debug APK
-      run: gradle assembleLiteNoinetNofsmlDebug --stacktrace
+      run: gradle assembleLiteLicCheckNoneNoinetNofsmlDebug --stacktrace
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
