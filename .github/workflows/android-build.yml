@@ -40,11 +40,8 @@ jobs:
           echo "Keystore already exists, skipping creation"
         fi
 
-    - name: Make Gradlew executable
-      run: chmod +x gradlew
-
     - name: Build Lite Debug APK
-      run: ./gradlew assembleLiteNoinetNofsmlDebug --stacktrace
+      run: gradle assembleLiteNoinetNofsmlDebug --stacktrace
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
