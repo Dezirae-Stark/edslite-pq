@@ -97,5 +97,13 @@ add_library( edsgost
              src/main/native/gost/edsgost.c
              src/main/native/gost/gost89.c )
 
+# QubesDroid Post-Quantum Crypto Library
+add_library( qubesdroid-crypto
+       SHARED
+             src/main/native/qubesdroid-crypto/qubesdroid_crypto.c )
+
+target_link_libraries( qubesdroid-crypto
+                       ${log-lib} )
+
 include(CMakeLists-full.txt)
 include(CMakeLists-fsm.txt)
